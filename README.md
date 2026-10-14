@@ -89,3 +89,7 @@ The first-phase requirements also include doctor listings and search, appointmen
 [IBM Developer Skills Network — Front-End Capstone Starter Code](https://github.com/ibm-developer-skills-network/grihf-frontend_capstone_starter_code)
 
 This project builds on the official starter repository. Refer to the upstream repository for its applicable terms.
+
+## Skills Network lab
+
+Cloned and verified in IBM Skills Network Cloud IDE.
