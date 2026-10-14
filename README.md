@@ -2,20 +2,20 @@
 
 ## About the project
 
-Medical Appointment Booking is the StayHealthy Inc. website project for the IBM Front-End Development Capstone. StayHealthy is a non-profit organization working to improve access to healthcare in remote areas. The website aims to help patients find general physicians and specialists and schedule online consultations.
+Medical Appointment Booking is the StayHealthy Inc. website project for the IBM Front-End Development Capstone. StayHealthy is a non-profit organization working to improve access to healthcare in remote areas. The planned website helps patients find doctors and schedule consultations.
 
 ## Current development stage
 
-This repository starts from the official IBM starter code. The initial landing page is located in `Landing_Page/`. This stage sets up the repository and project documentation; the features below will be implemented in subsequent course labs.
+This stage implements the **static website layouts** laboratory using HTML and CSS, with a small JavaScript enhancement for the mobile menu and demonstration form submission. The starter landing page has been adapted to the approved Module 1 design, using a green, lime and cream palette.
 
-## First-phase features
+The pages include:
 
-- Navigation with Home, Sign Up, Login and Appointments.
-- Patient registration, login and profile management.
-- Doctor search and listings with ratings and review comments.
-- Appointment scheduling, available time slots, rescheduling and cancellation.
-- Upcoming appointment notifications.
-- Consultation feedback and reviews.
+- A responsive navigation bar with Home, Appointments, Sign Up and Login links.
+- A sign-up form with required Role (Patient or Doctor), Name, Phone Number, Email and Password fields, plus Submit and Reset buttons. Email uses native email validation; the password requires at least eight characters.
+- A login form with required Email and Password fields, plus Login and Reset buttons.
+- Reciprocal links between the sign-up and login pages and links back to the landing page.
+
+These are academic layouts. Authentication, patient profiles and appointment processing belong to later development stages.
 
 ## Repository structure
 
@@ -24,33 +24,68 @@ grihf-frontend_capstone_starter_code/
 ├── Landing_Page/
 │   ├── LandingPage.html
 │   └── LandingPage.css
+├── Navbar/
+│   ├── Navbar.html
+│   └── Navbar.css
+├── Sign_Up/
+│   ├── Sign_Up.html
+│   └── Sign_Up.css
+├── Login/
+│   ├── Login.html
+│   └── Login.css
+├── assets/
+│   ├── forms.css
+│   └── site.js
 ├── .gitignore
 └── README.md
 ```
 
-The source repository uses `Landing_Page` as the directory name, although the lab instructions also refer to it as the Landing folder.
+`Navbar.css` supplies the shared visual styles, and `assets/forms.css` shares the form layout between Sign Up and Login. The lab may refer to `Landing_Page` simply as the Landing folder.
 
-## View the starter landing page
+## Open the website
 
-1. Clone your fork of this repository using its GitHub HTTPS URL.
-2. Open `Landing_Page/LandingPage.html` in a modern web browser, or serve the repository using the preview server available in the Skills Network lab.
+No npm installation or build step is required.
 
-The current starter contains HTML and CSS only and does not require an npm installation or build step. It references Google Fonts and Font Awesome, so an internet connection is needed for those external resources.
+Open `Landing_Page/LandingPage.html` in a modern browser, then use the navigation links to open Sign Up and Login.
 
-## Development workflow
+### Skills Network Labs
 
-1. Work in your own fork and keep the original landing page structure available.
-2. Follow the course labs to add static pages and then React components.
-3. Check layout, responsiveness and behavior after each change.
-4. Stage the intended files, create a descriptive commit and push it to your fork.
-5. Save the README URL and the screenshots required by the final assessment.
+1. Open the cloned repository in the lab editor.
+2. Open `Landing_Page/LandingPage.html` and choose **Go Live** to start Live Server.
+3. If the preview does not open automatically, open the lab's application preview on port **5500** and navigate to `/Landing_Page/LandingPage.html`.
 
-## Academic use and data
+### Optional local server
 
-This is an educational project. The starter does not provide medical consultations, authentication, appointment processing or storage of patient records. Use fictional data during development and testing. Never commit personal access tokens, passwords, private keys or real patient information.
+If Python is installed, run this command from the repository root:
+
+```bash
+python -m http.server 5500
+```
+
+Then visit [the local landing page](http://localhost:5500/Landing_Page/LandingPage.html).
+
+## Form behavior and data
+
+`assets/site.js` controls the responsive navigation and handles demonstration form submissions. With the script loaded, native browser validation checks the required fields before submission. A successful demonstration clears the fields and displays a status message; Reset clears the fields and that message.
+
+The demonstration does not create accounts, authenticate users, store credentials or transmit form data. Use fictional information only. Never commit personal access tokens, passwords, private keys or real patient information.
+
+## Laboratory evidence
+
+Capture the implemented layouts in the browser and save the screenshots with the names required by the lab:
+
+- `navbar_layout.png`
+- `signup_form_layout.png`
+- `login_form_layout.png`
+
+These names describe the evidence to prepare; this README does not certify that screenshots or checks have already been completed.
+
+## Later course stages
+
+The first-phase requirements also include doctor listings and search, appointment scheduling, rescheduling and cancellation, upcoming appointment notifications, consultation feedback and profile management. Follow the later course labs to implement those features and their required React and backend integration.
 
 ## Upstream starter
 
 [IBM Developer Skills Network — Front-End Capstone Starter Code](https://github.com/ibm-developer-skills-network/grihf-frontend_capstone_starter_code)
 
-The original starter files and history are preserved. Refer to the original repository for its applicable terms.
+This project builds on the official starter repository. Refer to the upstream repository for its applicable terms.
